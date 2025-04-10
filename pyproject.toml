@@ -1,0 +1,29 @@
+[project]
+name = "template-mcp-server"
+version = "0.1.0"
+description = "PDM template for developing an MCP server"
+authors = []
+dependencies = ["mcp>=1"]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.scripts]
+template-mcp-server = "template_mcp_server:main"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+test = "pytest"
+dev = "npx @modelcontextprotocol/inspector template-mcp-server"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-asyncio>=0.26.0",
+]
