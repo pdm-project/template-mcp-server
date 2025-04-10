@@ -12,7 +12,7 @@ Add the following to `claude_desktop_config.json`:
     "template-mcp-server": {
       "command": "uvx",
       "args": [
-        "template-mcp-server",
+        "template-mcp-server"
       ]
     }
   }
